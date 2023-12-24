@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital@1&family=Ephesis&family=Fraunces:wght@700&family=Montserrat:wght@500&family=Outfit:wght@700&family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital@1&family=Fraunces:wght@700&family=Montserrat:wght@500&family=News+Cycle:wght@400;700&family=Outfit:wght@700&family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital@1&family=Ephesis&family=Fraunces:wght@700&family=Montserrat:wght@500&family=Outfit:wght@700&family=Poppins:wght@200;300;400;500;600;700;800&family=Saira+Extra+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital@1&family=Ephesis&family=Fraunces:wght@700&family=Montserrat:wght@500&family=Outfit:wght@700&family=Poppins:wght@200;300;400;500;600;700;800&family=Roboto+Condensed:wght@400;700&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'New Cycle', sans-serif;
+}
+
+.container{
+    height: 100vh;
+    width: 100%;
+    background-image: url(images/mabs.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 5s;
+
+    animation-name: animate ;
+    animation-direction:alternate-reverse;
+    animation-duration: 20s;
+    animation-fill-mode:forwards;
+    animation-iteration-count:infinite;
+    animation-play-state:running;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes animate{
+    0%{
+        background-image: url(images/church.jpg);
+    }
+
+    20%{
+        background-image: url(images/nana.jpg);
+    }
+
+    40%{
+        background-image: url(images/siblings.jpg);
+    }
+
+    60%{
+        background-image: url(images/grandma.jpeg);
+    }
+
+    80%{
+        background-image: url(images/mabs.jpg);
+    }
+}
+
+/*I am trying to center this div but it is not working out, adding margin and padding is giving the page a scroll which I don't want*/
+.container .slide{
+    z-index: 1;
+    /*position: absolute;*/
+    width: 100%;
+    clip-path: circle(0% at 0 60%);
+    display: flex;
+    justify-items: center;
+    align-content:center;
+    padding: 10px 0;
+    
+    /*margin: 60px 10px 20px 0px;
+    padding: 2px 5px 10px 0px;*/
+}
+
+.container .slide.active{
+    clip-path: circle(150% at 0 50%);
+    transition: 2s;
+    transition-property: clip-path;
+}
+
+.container .slide .info{
+    position: absolute;
+    margin: 2px 5px 4px 5px;
+    padding: 2px 4px 2px 4px;
+    
+}
+
+.container .slide .info h2{
+    color: #233f55;
+    font-size: 2em;
+    font-weight: 800px;
+    letter-spacing: 1px;
+    font-family: 'Ephesis', cursive;
+    margin: 2px 5px 4px 5px;
+    padding: 2px 4px 2px 4px;
+}
+
+.container .slide .info h3 {
+    color: #0e0f0f;
+    font-weight: 900;
+    letter-spacing: 1px;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 2px 5px 4px 5px;
+    padding: 2px 4px 2px 4px;
+}
+
+.sur{
+    letter-spacing: 15px;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding: 15px 0px 10px, 0px ;
+    font-weight: bold;
+}
+
+.img-slider .slide .info h4 {
+    color: #0b0c0c;
+    font-weight: 900;
+    letter-spacing: 1px;
+    font-family: 'Saira Extra Condensed', sans-serif;
+    padding: 10px 0px 10px 0px;
+}
+
+.img-slider .slide .info p{
+    color: rgb(214, 222, 233);
+    background: rgba(33, 33, 36, 0.547);
+    width: 70%;
+    padding: 10px 5px 5px 10px;
+    border-radius: 4px ;
+    margin: 20px 0px 50px -10px;
+    font-family: 'New Cycle', sans-serif;
+    font-weight: 100px;
+}
+    

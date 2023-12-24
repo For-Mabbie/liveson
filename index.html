@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Mabbie Lives On</title>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="slide">
+            <img src="" alt="">
+            <div class="info">
+                <h4>Remebered by All</h4>
+                <h2>Obaapayin</h2>
+                <h3>CHRISTIANA ABENA <br><span class="sur">GYAMFUAA</span> </h3>
+                <p>Cherishing the memories we created together, a tribute to a loving...<br>Mother, <br>Sister, <br>Grandmother, <br>
+                Great-grandma, <br> And FRIEND</p>
+            </div>
+        </div>
+
+        <div class="slide">
+              <!-- <img src="" alt="">-->
+            <div class="info">
+                <h4>Remebered by Church</h4>
+                <h2>Obaapayin</h2>
+                <h3>CHRISTIANA ABENA <br><span class="sur">GYAMFUAA</span> </h3>
+                <p>A year gone by, but the echoes of Obaapayin Christiana Abena Gyamfuaa's faith continues to inspire us and her devotion
+                resonating in our church...</p>
+            </div>
+        </div>
+
+        <div class="slide">
+               <!-- <img src="" alt="">-->
+            <div class="info">
+                <h4>Remebered by Children</h4>
+                <h2>Obaapayin</h2>
+                <h3>CHRISTIANA ABENA <br><span class="sur">GYAMFUAA</span> </h3>
+                <p>A tribute to the guiding light that Maabena provided, even in her absence.
+                    <br> We celebrate the love and lessons that lives on...</p>
+            </div>
+        </div>
+
+        <div class="slide">
+               <!-- <img src="" alt="">-->
+            <div class="info">
+                <h4>Remebered by Siblings</h4>
+                <h2>Obaapayin</h2>
+                <h3>CHRISTIANA ABENA <br><span class="sur">GYAMFUAA</span> </h3>
+                <p>To a sibling who left a lasting imprint on our hearts, 
+                    <br> clelebrating your enduring love...</p>
+            </div>
+        </div>
+
+        <div class="slide">
+               <!-- <img src="" alt="">-->
+            <div class="info">
+                <h4>Remebered by Grand-children</h4>
+                <h2>Obaapayin</h2>
+                <h3>CHRISTIANA ABENA<br><span class="sur">GYAMFUAA</span> </h3>
+                <p>Celebrating the legacy of Mabbie; Our Nana provided, even in her absence. 
+                    <br> We remeber the warmth and joy that you brought into our lives...</p>
+            </div>
+        </div>
+
+        
+
+        <div class="slide">
+           <!-- <img src="" alt="">-->
+            <div class="info">
+                <h4>Remebered by Great-grandchildren</h4>
+                <h2>Obaapayin</h2>
+                <h3>CHRISTIANA ABENA <br><span class="sur">GYAMFUAA</span> </h3>
+                <p>To a great-grandma whose love transcends generations,
+                    <br> a guardian angel for our family's newest members...</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="navigation">
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+    </div>
+
+    <script type="text/javascript">
+        var slide = document.querySelectorAll('.slide');
+        var btn = document.querySelectorAll('.btn');
+        let currentSlide = 1;
+
+        var manualNav = function(manual){
+            slide.forEach((slide) => {
+                slide.classlist.remove('active');
+
+            btn.forEach()
+            
+            });
+
+            slides[manual].classList.add('active');
+            btn[manual].classList.add('active');
+        }
+
+        btn.forEach((btn, i) =>{
+            btn.addEventListener("click", () =>{
+                manualNav(i);
+                currentSlide =i;
+            });
+        });
+
+        //image-slider autoplay
+        var repeat = function(activeClass){
+            let active = document.getElementsByClassName('active');
+            let i = 1;
+
+            var repeater = () =>{
+                setTimeout(function(){
+                    [...active].forEach((activeSlide) => {
+                        activeSlide.classList.remove('active');
+                    })
+
+                    slide[i].classList.add('active');
+                    btn[i].classList.add('active');
+                    i++;
+
+                    if(slide.length == i){
+                        i= 0;
+                    }
+                    if(i >= slide.length){
+                        return;
+                    } 
+ 
+                    repeater();
+                }, 10000);
+            }
+                    repeater();
+            }
+            repeat();
+
+    </script>
+    
+</body>
+</html>
