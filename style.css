@@ -76,7 +76,7 @@ body{
     position: absolute;
     margin: 2px 5px 4px 5px;
     padding: 2px 4px 2px 4px;
-    
+    font-family: 'New Cycle', sans-serif;
 }
 
 .container .slide .info h2{
@@ -110,7 +110,7 @@ body{
     font-weight: 900;
     letter-spacing: 1px;
     font-family: 'Saira Extra Condensed', sans-serif;
-    padding: 10px 0px 10px 0px;
+    padding: 5px 0px 10px 0px;
 }
 
 .img-slider .slide .info p{
